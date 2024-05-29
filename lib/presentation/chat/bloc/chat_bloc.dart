@@ -52,7 +52,7 @@ class ChatBloc extends Bloc<ChatEvent, ChatState> {
         .orderBy('createdOn', descending: true)
         .snapshots()
         .listen((snapshot) {
-      final messages = snapshot.docs.map((doc) => ChatRequest.fromJson(doc.data() as Map<String, dynamic>)).toList();
+      final messages = snapshot.docs.map((doc) => ChatRequestModel.fromJson(doc.data() as Map<String, dynamic>)).toList();
       add(ChatEvent.updateMessages(messages: messages));
     });
   }

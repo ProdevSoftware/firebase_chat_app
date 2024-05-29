@@ -1,13 +1,14 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'signup_request.dart';
+part of 'signup_request_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$SignupRequestImpl _$$SignupRequestImplFromJson(Map<String, dynamic> json) =>
-    _$SignupRequestImpl(
+_$SignupRequestModelImpl _$$SignupRequestModelImplFromJson(
+        Map<String, dynamic> json) =>
+    _$SignupRequestModelImpl(
       firstname: json['firstname'] as String,
       lastname: json['lastname'] as String,
       email: json['email'] as String,
@@ -15,7 +16,8 @@ _$SignupRequestImpl _$$SignupRequestImplFromJson(Map<String, dynamic> json) =>
       image: json['image'] as String,
     );
 
-Map<String, dynamic> _$$SignupRequestImplToJson(_$SignupRequestImpl instance) =>
+Map<String, dynamic> _$$SignupRequestModelImplToJson(
+        _$SignupRequestModelImpl instance) =>
     <String, dynamic>{
       'firstname': instance.firstname,
       'lastname': instance.lastname,

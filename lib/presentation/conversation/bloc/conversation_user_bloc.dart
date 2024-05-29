@@ -1,17 +1,14 @@
 import 'dart:async';
-import 'package:bloc/bloc.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_chat_app/presentation/user_response/model/user_response_model.dart';
+import 'package:firebase_chat_app/presentation/user/model/user_response_model.dart';
 import 'package:firebase_chat_app/utils/string_constant.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'conversation_user_event.dart';
 
 part 'conversation_user_state.dart';
-
-part 'conversation_user_bloc_status.dart';
-
 part 'conversation_user_bloc.freezed.dart';
 
 class ConversationUserBloc
@@ -43,14 +40,14 @@ class ConversationUserBloc
         }
 
         if (userIds.isNotEmpty) {
-          List<UserResponse> allUsers = [];
+          List<UserResponseModel> allUsers = [];
           for (var userId in userIds) {
             final userSnapshot = await FirebaseFirestore.instance
                 .collection('users')
                 .doc(userId)
                 .get();
             if (userSnapshot.exists) {
-              UserResponse user = UserResponse.fromJson(
+              UserResponseModel user = UserResponseModel.fromJson(
                   userSnapshot.data() as Map<String, dynamic>);
               allUsers.add(user);
             }

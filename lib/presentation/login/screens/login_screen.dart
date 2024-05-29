@@ -2,8 +2,7 @@ import 'package:firebase_chat_app/global_widget/custom_button.dart';
 import 'package:firebase_chat_app/global_widget/custom_textfield.dart';
 import 'package:firebase_chat_app/presentation/bottom_naviagtion/screen/bottom_navigationbar_screen.dart';
 import 'package:firebase_chat_app/presentation/login/bloc/login_bloc.dart';
-import 'package:firebase_chat_app/presentation/login/bloc/login_status_state.dart';
-import 'package:firebase_chat_app/presentation/login/model/login_request.dart';
+import 'package:firebase_chat_app/presentation/login/model/login_request_model.dart';
 import 'package:firebase_chat_app/presentation/signup/screens/signup_screen.dart';
 import 'package:firebase_chat_app/utils/app_style_constant.dart';
 import 'package:firebase_chat_app/utils/color_constant.dart';
@@ -145,7 +144,7 @@ class _LogInScreenState extends State<LogInScreen> {
                       } else {
                         bloc.add(
                           LogInEvent.firebaseAuth(
-                            loginRequest: LoginRequest(
+                            loginRequest: LoginRequestModel(
                               email: emailController.text,
                               password: passwordController.text,
                             ),

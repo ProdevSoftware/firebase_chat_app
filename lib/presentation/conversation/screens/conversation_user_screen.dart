@@ -1,29 +1,36 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_chat_app/presentation/chat/screen/chat_screen.dart';
+import 'package:firebase_chat_app/presentation/conversation/bloc/conversation_user_bloc.dart';
 import 'package:firebase_chat_app/presentation/login/screens/login_screen.dart';
-import 'package:firebase_chat_app/presentation/user_response/bloc/user_response_bloc.dart';
 import 'package:firebase_chat_app/utils/color_constant.dart';
 import 'package:firebase_chat_app/utils/string_constant.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class UserResponseScreen extends StatefulWidget {
-  const UserResponseScreen({super.key});
+class ConversationUserScreen extends StatefulWidget {
+  const ConversationUserScreen({super.key});
 
   @override
-  State<UserResponseScreen> createState() => _UserResponseScreenState();
+  State<ConversationUserScreen> createState() => _ConversationUserScreenState();
 }
 
-class _UserResponseScreenState extends State<UserResponseScreen> {
+class _ConversationUserScreenState extends State<ConversationUserScreen> {
+  late final ConversationUserBloc bloc;
   final FirebaseAuth auth = FirebaseAuth.instance;
-  late final UserResponseBloc bloc;
 
   @override
   void initState() {
     super.initState();
-    bloc = UserResponseBloc()..add(const UserResponseEvent.fetchUsers());
+    bloc = ConversationUserBloc()
+      ..add(const ConversationUserEvent.conversationUserList());
+  }
+
+  @override
+  void dispose() {
+    bloc.close();
+    super.dispose();
   }
 
   @override
@@ -32,7 +39,7 @@ class _UserResponseScreenState extends State<UserResponseScreen> {
       create: (context) => bloc,
       child: Scaffold(
         appBar: AppBar(
-          title: const Text(StringConstant.allUsers),
+          title: const Text(StringConstant.conversationUsers),
           backgroundColor: ColorConstant.colorE1BEE7,
           actions: [
             IconButton(
@@ -43,12 +50,21 @@ class _UserResponseScreenState extends State<UserResponseScreen> {
           ],
           centerTitle: true,
         ),
-        body: BlocBuilder<UserResponseBloc, UserResponseState>(
+        body: BlocBuilder<ConversationUserBloc, ConversationUserState>(
           builder: (context, state) {
-            if (state.userResponseStatus == UserResponseStatus.loading) {
+            if (state.conversationUserStatus ==
+                ConversationUserStatus.loading) {
               return const Center(child: CircularProgressIndicator());
-            } else if (state.userResponseStatus == UserResponseStatus.success) {
+            } else if (state.conversationUserStatus ==
+                ConversationUserStatus.error) {
+              return Center(child: Text('${state.errorMessage}'));
+            } else if (state.conversationUserStatus ==
+                ConversationUserStatus.success) {
               final users = state.allUsersData!;
+              if (users.isEmpty) {
+                return const Center(
+                    child: Text(StringConstant.usersNotAvailable));
+              }
               return Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: ListView.builder(
@@ -58,6 +74,7 @@ class _UserResponseScreenState extends State<UserResponseScreen> {
                     return Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: ListTile(
+
                         onTap: () async {
                           final String chatRoom = await getOrCreateChatRoomId(
                               auth.currentUser!.uid, user.id ?? '');
@@ -96,8 +113,6 @@ class _UserResponseScreenState extends State<UserResponseScreen> {
                   },
                 ),
               );
-            } else if (state.userResponseStatus == UserResponseStatus.error) {
-              return Center(child: Text('${state.errorMessage}'));
             } else {
               return const Center(child: Text(StringConstant.dataNotAvailable));
             }
@@ -105,6 +120,23 @@ class _UserResponseScreenState extends State<UserResponseScreen> {
         ),
       ),
     );
+  }
+
+  Future<String> getOrCreateChatRoomId(String user1, String user2) async {
+    final users = [user1, user2]..sort();
+    final chatRoomId = '${users[0]}_${users[1]}';
+    final chatRoomDoc =
+        FirebaseFirestore.instance.collection('chatrooms').doc(chatRoomId);
+    final chatRoomSnapshot = await chatRoomDoc.get();
+
+    if (!chatRoomSnapshot.exists) {
+      await chatRoomDoc.set({
+        'users': [user1, user2],
+        'createdOn': FieldValue.serverTimestamp(),
+      });
+    }
+
+    return chatRoomId;
   }
 
   Future<void> showLogoutDialog(BuildContext context) async {
@@ -138,7 +170,7 @@ class _UserResponseScreenState extends State<UserResponseScreen> {
 
                 Navigator.of(context).pop(true);
               } catch (e) {
-                print(" $e");
+                print("$e");
               }
             },
             child: const Text(StringConstant.logout,
@@ -153,22 +185,5 @@ class _UserResponseScreenState extends State<UserResponseScreen> {
         MaterialPageRoute(builder: (context) => const LogInScreen()),
       );
     }
-  }
-
-  Future<String> getOrCreateChatRoomId(String user1, String user2) async {
-    final users = [user1, user2]..sort();
-    final chatRoomId = '${users[0]}_${users[1]}';
-    final chatRoomDoc =
-        FirebaseFirestore.instance.collection('chatrooms').doc(chatRoomId);
-    final chatRoomSnapshot = await chatRoomDoc.get();
-
-    if (!chatRoomSnapshot.exists) {
-      await chatRoomDoc.set({
-        'users': [user1, user2],
-        'createdOn': FieldValue.serverTimestamp(),
-      });
-    }
-
-    return chatRoomId;
   }
 }

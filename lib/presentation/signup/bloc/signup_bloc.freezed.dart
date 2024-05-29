@@ -25,7 +25,7 @@ mixin _$SignupEvent {
     required TResult Function() onInitialAllEvent,
     required TResult Function() togglePasswordVisibility,
     required TResult Function() imagePicker,
-    required TResult Function(SignupRequest signupRequest) firebaseAuth,
+    required TResult Function(SignupRequestModel signupRequest) firebaseAuth,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -37,7 +37,7 @@ mixin _$SignupEvent {
     TResult? Function()? onInitialAllEvent,
     TResult? Function()? togglePasswordVisibility,
     TResult? Function()? imagePicker,
-    TResult? Function(SignupRequest signupRequest)? firebaseAuth,
+    TResult? Function(SignupRequestModel signupRequest)? firebaseAuth,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -49,7 +49,7 @@ mixin _$SignupEvent {
     TResult Function()? onInitialAllEvent,
     TResult Function()? togglePasswordVisibility,
     TResult Function()? imagePicker,
-    TResult Function(SignupRequest signupRequest)? firebaseAuth,
+    TResult Function(SignupRequestModel signupRequest)? firebaseAuth,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -185,7 +185,7 @@ class _$OnChangedFirstNameImpl implements _OnChangedFirstName {
     required TResult Function() onInitialAllEvent,
     required TResult Function() togglePasswordVisibility,
     required TResult Function() imagePicker,
-    required TResult Function(SignupRequest signupRequest) firebaseAuth,
+    required TResult Function(SignupRequestModel signupRequest) firebaseAuth,
   }) {
     return firstname(this.firstname);
   }
@@ -200,7 +200,7 @@ class _$OnChangedFirstNameImpl implements _OnChangedFirstName {
     TResult? Function()? onInitialAllEvent,
     TResult? Function()? togglePasswordVisibility,
     TResult? Function()? imagePicker,
-    TResult? Function(SignupRequest signupRequest)? firebaseAuth,
+    TResult? Function(SignupRequestModel signupRequest)? firebaseAuth,
   }) {
     return firstname?.call(this.firstname);
   }
@@ -215,7 +215,7 @@ class _$OnChangedFirstNameImpl implements _OnChangedFirstName {
     TResult Function()? onInitialAllEvent,
     TResult Function()? togglePasswordVisibility,
     TResult Function()? imagePicker,
-    TResult Function(SignupRequest signupRequest)? firebaseAuth,
+    TResult Function(SignupRequestModel signupRequest)? firebaseAuth,
     required TResult orElse(),
   }) {
     if (firstname != null) {
@@ -359,7 +359,7 @@ class _$OnChangedLastNameImpl implements _OnChangedLastName {
     required TResult Function() onInitialAllEvent,
     required TResult Function() togglePasswordVisibility,
     required TResult Function() imagePicker,
-    required TResult Function(SignupRequest signupRequest) firebaseAuth,
+    required TResult Function(SignupRequestModel signupRequest) firebaseAuth,
   }) {
     return lastname(this.lastname);
   }
@@ -374,7 +374,7 @@ class _$OnChangedLastNameImpl implements _OnChangedLastName {
     TResult? Function()? onInitialAllEvent,
     TResult? Function()? togglePasswordVisibility,
     TResult? Function()? imagePicker,
-    TResult? Function(SignupRequest signupRequest)? firebaseAuth,
+    TResult? Function(SignupRequestModel signupRequest)? firebaseAuth,
   }) {
     return lastname?.call(this.lastname);
   }
@@ -389,7 +389,7 @@ class _$OnChangedLastNameImpl implements _OnChangedLastName {
     TResult Function()? onInitialAllEvent,
     TResult Function()? togglePasswordVisibility,
     TResult Function()? imagePicker,
-    TResult Function(SignupRequest signupRequest)? firebaseAuth,
+    TResult Function(SignupRequestModel signupRequest)? firebaseAuth,
     required TResult orElse(),
   }) {
     if (lastname != null) {
@@ -532,7 +532,7 @@ class _$OnChangedEmailImpl implements _OnChangedEmail {
     required TResult Function() onInitialAllEvent,
     required TResult Function() togglePasswordVisibility,
     required TResult Function() imagePicker,
-    required TResult Function(SignupRequest signupRequest) firebaseAuth,
+    required TResult Function(SignupRequestModel signupRequest) firebaseAuth,
   }) {
     return email(this.email);
   }
@@ -547,7 +547,7 @@ class _$OnChangedEmailImpl implements _OnChangedEmail {
     TResult? Function()? onInitialAllEvent,
     TResult? Function()? togglePasswordVisibility,
     TResult? Function()? imagePicker,
-    TResult? Function(SignupRequest signupRequest)? firebaseAuth,
+    TResult? Function(SignupRequestModel signupRequest)? firebaseAuth,
   }) {
     return email?.call(this.email);
   }
@@ -562,7 +562,7 @@ class _$OnChangedEmailImpl implements _OnChangedEmail {
     TResult Function()? onInitialAllEvent,
     TResult Function()? togglePasswordVisibility,
     TResult Function()? imagePicker,
-    TResult Function(SignupRequest signupRequest)? firebaseAuth,
+    TResult Function(SignupRequestModel signupRequest)? firebaseAuth,
     required TResult orElse(),
   }) {
     if (email != null) {
@@ -706,7 +706,7 @@ class _$OnChangedPasswordImpl implements _OnChangedPassword {
     required TResult Function() onInitialAllEvent,
     required TResult Function() togglePasswordVisibility,
     required TResult Function() imagePicker,
-    required TResult Function(SignupRequest signupRequest) firebaseAuth,
+    required TResult Function(SignupRequestModel signupRequest) firebaseAuth,
   }) {
     return password(this.password);
   }
@@ -721,7 +721,7 @@ class _$OnChangedPasswordImpl implements _OnChangedPassword {
     TResult? Function()? onInitialAllEvent,
     TResult? Function()? togglePasswordVisibility,
     TResult? Function()? imagePicker,
-    TResult? Function(SignupRequest signupRequest)? firebaseAuth,
+    TResult? Function(SignupRequestModel signupRequest)? firebaseAuth,
   }) {
     return password?.call(this.password);
   }
@@ -736,7 +736,7 @@ class _$OnChangedPasswordImpl implements _OnChangedPassword {
     TResult Function()? onInitialAllEvent,
     TResult Function()? togglePasswordVisibility,
     TResult Function()? imagePicker,
-    TResult Function(SignupRequest signupRequest)? firebaseAuth,
+    TResult Function(SignupRequestModel signupRequest)? firebaseAuth,
     required TResult orElse(),
   }) {
     if (password != null) {
@@ -852,7 +852,7 @@ class _$OnInitialAllEventImpl implements _OnInitialAllEvent {
     required TResult Function() onInitialAllEvent,
     required TResult Function() togglePasswordVisibility,
     required TResult Function() imagePicker,
-    required TResult Function(SignupRequest signupRequest) firebaseAuth,
+    required TResult Function(SignupRequestModel signupRequest) firebaseAuth,
   }) {
     return onInitialAllEvent();
   }
@@ -867,7 +867,7 @@ class _$OnInitialAllEventImpl implements _OnInitialAllEvent {
     TResult? Function()? onInitialAllEvent,
     TResult? Function()? togglePasswordVisibility,
     TResult? Function()? imagePicker,
-    TResult? Function(SignupRequest signupRequest)? firebaseAuth,
+    TResult? Function(SignupRequestModel signupRequest)? firebaseAuth,
   }) {
     return onInitialAllEvent?.call();
   }
@@ -882,7 +882,7 @@ class _$OnInitialAllEventImpl implements _OnInitialAllEvent {
     TResult Function()? onInitialAllEvent,
     TResult Function()? togglePasswordVisibility,
     TResult Function()? imagePicker,
-    TResult Function(SignupRequest signupRequest)? firebaseAuth,
+    TResult Function(SignupRequestModel signupRequest)? firebaseAuth,
     required TResult orElse(),
   }) {
     if (onInitialAllEvent != null) {
@@ -995,7 +995,7 @@ class _$TogglePasswordVisibilityImpl implements _TogglePasswordVisibility {
     required TResult Function() onInitialAllEvent,
     required TResult Function() togglePasswordVisibility,
     required TResult Function() imagePicker,
-    required TResult Function(SignupRequest signupRequest) firebaseAuth,
+    required TResult Function(SignupRequestModel signupRequest) firebaseAuth,
   }) {
     return togglePasswordVisibility();
   }
@@ -1010,7 +1010,7 @@ class _$TogglePasswordVisibilityImpl implements _TogglePasswordVisibility {
     TResult? Function()? onInitialAllEvent,
     TResult? Function()? togglePasswordVisibility,
     TResult? Function()? imagePicker,
-    TResult? Function(SignupRequest signupRequest)? firebaseAuth,
+    TResult? Function(SignupRequestModel signupRequest)? firebaseAuth,
   }) {
     return togglePasswordVisibility?.call();
   }
@@ -1025,7 +1025,7 @@ class _$TogglePasswordVisibilityImpl implements _TogglePasswordVisibility {
     TResult Function()? onInitialAllEvent,
     TResult Function()? togglePasswordVisibility,
     TResult Function()? imagePicker,
-    TResult Function(SignupRequest signupRequest)? firebaseAuth,
+    TResult Function(SignupRequestModel signupRequest)? firebaseAuth,
     required TResult orElse(),
   }) {
     if (togglePasswordVisibility != null) {
@@ -1135,7 +1135,7 @@ class _$ImagePickerImpl implements _ImagePicker {
     required TResult Function() onInitialAllEvent,
     required TResult Function() togglePasswordVisibility,
     required TResult Function() imagePicker,
-    required TResult Function(SignupRequest signupRequest) firebaseAuth,
+    required TResult Function(SignupRequestModel signupRequest) firebaseAuth,
   }) {
     return imagePicker();
   }
@@ -1150,7 +1150,7 @@ class _$ImagePickerImpl implements _ImagePicker {
     TResult? Function()? onInitialAllEvent,
     TResult? Function()? togglePasswordVisibility,
     TResult? Function()? imagePicker,
-    TResult? Function(SignupRequest signupRequest)? firebaseAuth,
+    TResult? Function(SignupRequestModel signupRequest)? firebaseAuth,
   }) {
     return imagePicker?.call();
   }
@@ -1165,7 +1165,7 @@ class _$ImagePickerImpl implements _ImagePicker {
     TResult Function()? onInitialAllEvent,
     TResult Function()? togglePasswordVisibility,
     TResult Function()? imagePicker,
-    TResult Function(SignupRequest signupRequest)? firebaseAuth,
+    TResult Function(SignupRequestModel signupRequest)? firebaseAuth,
     required TResult orElse(),
   }) {
     if (imagePicker != null) {
@@ -1236,9 +1236,9 @@ abstract class _$$FirebaseAuthImplCopyWith<$Res> {
           _$FirebaseAuthImpl value, $Res Function(_$FirebaseAuthImpl) then) =
       __$$FirebaseAuthImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({SignupRequest signupRequest});
+  $Res call({SignupRequestModel signupRequest});
 
-  $SignupRequestCopyWith<$Res> get signupRequest;
+  $SignupRequestModelCopyWith<$Res> get signupRequest;
 }
 
 /// @nodoc
@@ -1258,14 +1258,14 @@ class __$$FirebaseAuthImplCopyWithImpl<$Res>
       signupRequest: null == signupRequest
           ? _value.signupRequest
           : signupRequest // ignore: cast_nullable_to_non_nullable
-              as SignupRequest,
+              as SignupRequestModel,
     ));
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $SignupRequestCopyWith<$Res> get signupRequest {
-    return $SignupRequestCopyWith<$Res>(_value.signupRequest, (value) {
+  $SignupRequestModelCopyWith<$Res> get signupRequest {
+    return $SignupRequestModelCopyWith<$Res>(_value.signupRequest, (value) {
       return _then(_value.copyWith(signupRequest: value));
     });
   }
@@ -1277,7 +1277,7 @@ class _$FirebaseAuthImpl implements _FirebaseAuth {
   const _$FirebaseAuthImpl({required this.signupRequest});
 
   @override
-  final SignupRequest signupRequest;
+  final SignupRequestModel signupRequest;
 
   @override
   String toString() {
@@ -1312,7 +1312,7 @@ class _$FirebaseAuthImpl implements _FirebaseAuth {
     required TResult Function() onInitialAllEvent,
     required TResult Function() togglePasswordVisibility,
     required TResult Function() imagePicker,
-    required TResult Function(SignupRequest signupRequest) firebaseAuth,
+    required TResult Function(SignupRequestModel signupRequest) firebaseAuth,
   }) {
     return firebaseAuth(signupRequest);
   }
@@ -1327,7 +1327,7 @@ class _$FirebaseAuthImpl implements _FirebaseAuth {
     TResult? Function()? onInitialAllEvent,
     TResult? Function()? togglePasswordVisibility,
     TResult? Function()? imagePicker,
-    TResult? Function(SignupRequest signupRequest)? firebaseAuth,
+    TResult? Function(SignupRequestModel signupRequest)? firebaseAuth,
   }) {
     return firebaseAuth?.call(signupRequest);
   }
@@ -1342,7 +1342,7 @@ class _$FirebaseAuthImpl implements _FirebaseAuth {
     TResult Function()? onInitialAllEvent,
     TResult Function()? togglePasswordVisibility,
     TResult Function()? imagePicker,
-    TResult Function(SignupRequest signupRequest)? firebaseAuth,
+    TResult Function(SignupRequestModel signupRequest)? firebaseAuth,
     required TResult orElse(),
   }) {
     if (firebaseAuth != null) {
@@ -1404,10 +1404,10 @@ class _$FirebaseAuthImpl implements _FirebaseAuth {
 }
 
 abstract class _FirebaseAuth implements SignupEvent {
-  const factory _FirebaseAuth({required final SignupRequest signupRequest}) =
-      _$FirebaseAuthImpl;
+  const factory _FirebaseAuth(
+      {required final SignupRequestModel signupRequest}) = _$FirebaseAuthImpl;
 
-  SignupRequest get signupRequest;
+  SignupRequestModel get signupRequest;
   @JsonKey(ignore: true)
   _$$FirebaseAuthImplCopyWith<_$FirebaseAuthImpl> get copyWith =>
       throw _privateConstructorUsedError;

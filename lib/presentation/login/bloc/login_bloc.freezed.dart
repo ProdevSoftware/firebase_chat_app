@@ -23,7 +23,7 @@ mixin _$LogInEvent {
     required TResult Function() onInitialAllEvent,
     required TResult Function() signOut,
     required TResult Function() togglePasswordVisibility,
-    required TResult Function(LoginRequest loginRequest) firebaseAuth,
+    required TResult Function(LoginRequestModel loginRequest) firebaseAuth,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -33,7 +33,7 @@ mixin _$LogInEvent {
     TResult? Function()? onInitialAllEvent,
     TResult? Function()? signOut,
     TResult? Function()? togglePasswordVisibility,
-    TResult? Function(LoginRequest loginRequest)? firebaseAuth,
+    TResult? Function(LoginRequestModel loginRequest)? firebaseAuth,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -43,7 +43,7 @@ mixin _$LogInEvent {
     TResult Function()? onInitialAllEvent,
     TResult Function()? signOut,
     TResult Function()? togglePasswordVisibility,
-    TResult Function(LoginRequest loginRequest)? firebaseAuth,
+    TResult Function(LoginRequestModel loginRequest)? firebaseAuth,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -171,7 +171,7 @@ class _$OnChangedEmailAddressImpl implements _OnChangedEmailAddress {
     required TResult Function() onInitialAllEvent,
     required TResult Function() signOut,
     required TResult Function() togglePasswordVisibility,
-    required TResult Function(LoginRequest loginRequest) firebaseAuth,
+    required TResult Function(LoginRequestModel loginRequest) firebaseAuth,
   }) {
     return emailAddress(email);
   }
@@ -184,7 +184,7 @@ class _$OnChangedEmailAddressImpl implements _OnChangedEmailAddress {
     TResult? Function()? onInitialAllEvent,
     TResult? Function()? signOut,
     TResult? Function()? togglePasswordVisibility,
-    TResult? Function(LoginRequest loginRequest)? firebaseAuth,
+    TResult? Function(LoginRequestModel loginRequest)? firebaseAuth,
   }) {
     return emailAddress?.call(email);
   }
@@ -197,7 +197,7 @@ class _$OnChangedEmailAddressImpl implements _OnChangedEmailAddress {
     TResult Function()? onInitialAllEvent,
     TResult Function()? signOut,
     TResult Function()? togglePasswordVisibility,
-    TResult Function(LoginRequest loginRequest)? firebaseAuth,
+    TResult Function(LoginRequestModel loginRequest)? firebaseAuth,
     required TResult orElse(),
   }) {
     if (emailAddress != null) {
@@ -333,7 +333,7 @@ class _$OnChangePasswordImpl implements _OnChangePassword {
     required TResult Function() onInitialAllEvent,
     required TResult Function() signOut,
     required TResult Function() togglePasswordVisibility,
-    required TResult Function(LoginRequest loginRequest) firebaseAuth,
+    required TResult Function(LoginRequestModel loginRequest) firebaseAuth,
   }) {
     return password(this.password);
   }
@@ -346,7 +346,7 @@ class _$OnChangePasswordImpl implements _OnChangePassword {
     TResult? Function()? onInitialAllEvent,
     TResult? Function()? signOut,
     TResult? Function()? togglePasswordVisibility,
-    TResult? Function(LoginRequest loginRequest)? firebaseAuth,
+    TResult? Function(LoginRequestModel loginRequest)? firebaseAuth,
   }) {
     return password?.call(this.password);
   }
@@ -359,7 +359,7 @@ class _$OnChangePasswordImpl implements _OnChangePassword {
     TResult Function()? onInitialAllEvent,
     TResult Function()? signOut,
     TResult Function()? togglePasswordVisibility,
-    TResult Function(LoginRequest loginRequest)? firebaseAuth,
+    TResult Function(LoginRequestModel loginRequest)? firebaseAuth,
     required TResult orElse(),
   }) {
     if (password != null) {
@@ -467,7 +467,7 @@ class _$OnInitialAllEventImpl implements _OnInitialAllEvent {
     required TResult Function() onInitialAllEvent,
     required TResult Function() signOut,
     required TResult Function() togglePasswordVisibility,
-    required TResult Function(LoginRequest loginRequest) firebaseAuth,
+    required TResult Function(LoginRequestModel loginRequest) firebaseAuth,
   }) {
     return onInitialAllEvent();
   }
@@ -480,7 +480,7 @@ class _$OnInitialAllEventImpl implements _OnInitialAllEvent {
     TResult? Function()? onInitialAllEvent,
     TResult? Function()? signOut,
     TResult? Function()? togglePasswordVisibility,
-    TResult? Function(LoginRequest loginRequest)? firebaseAuth,
+    TResult? Function(LoginRequestModel loginRequest)? firebaseAuth,
   }) {
     return onInitialAllEvent?.call();
   }
@@ -493,7 +493,7 @@ class _$OnInitialAllEventImpl implements _OnInitialAllEvent {
     TResult Function()? onInitialAllEvent,
     TResult Function()? signOut,
     TResult Function()? togglePasswordVisibility,
-    TResult Function(LoginRequest loginRequest)? firebaseAuth,
+    TResult Function(LoginRequestModel loginRequest)? firebaseAuth,
     required TResult orElse(),
   }) {
     if (onInitialAllEvent != null) {
@@ -595,7 +595,7 @@ class _$SignOutImpl implements _SignOut {
     required TResult Function() onInitialAllEvent,
     required TResult Function() signOut,
     required TResult Function() togglePasswordVisibility,
-    required TResult Function(LoginRequest loginRequest) firebaseAuth,
+    required TResult Function(LoginRequestModel loginRequest) firebaseAuth,
   }) {
     return signOut();
   }
@@ -608,7 +608,7 @@ class _$SignOutImpl implements _SignOut {
     TResult? Function()? onInitialAllEvent,
     TResult? Function()? signOut,
     TResult? Function()? togglePasswordVisibility,
-    TResult? Function(LoginRequest loginRequest)? firebaseAuth,
+    TResult? Function(LoginRequestModel loginRequest)? firebaseAuth,
   }) {
     return signOut?.call();
   }
@@ -621,7 +621,7 @@ class _$SignOutImpl implements _SignOut {
     TResult Function()? onInitialAllEvent,
     TResult Function()? signOut,
     TResult Function()? togglePasswordVisibility,
-    TResult Function(LoginRequest loginRequest)? firebaseAuth,
+    TResult Function(LoginRequestModel loginRequest)? firebaseAuth,
     required TResult orElse(),
   }) {
     if (signOut != null) {
@@ -726,7 +726,7 @@ class _$TogglePasswordVisibilityImpl implements _TogglePasswordVisibility {
     required TResult Function() onInitialAllEvent,
     required TResult Function() signOut,
     required TResult Function() togglePasswordVisibility,
-    required TResult Function(LoginRequest loginRequest) firebaseAuth,
+    required TResult Function(LoginRequestModel loginRequest) firebaseAuth,
   }) {
     return togglePasswordVisibility();
   }
@@ -739,7 +739,7 @@ class _$TogglePasswordVisibilityImpl implements _TogglePasswordVisibility {
     TResult? Function()? onInitialAllEvent,
     TResult? Function()? signOut,
     TResult? Function()? togglePasswordVisibility,
-    TResult? Function(LoginRequest loginRequest)? firebaseAuth,
+    TResult? Function(LoginRequestModel loginRequest)? firebaseAuth,
   }) {
     return togglePasswordVisibility?.call();
   }
@@ -752,7 +752,7 @@ class _$TogglePasswordVisibilityImpl implements _TogglePasswordVisibility {
     TResult Function()? onInitialAllEvent,
     TResult Function()? signOut,
     TResult Function()? togglePasswordVisibility,
-    TResult Function(LoginRequest loginRequest)? firebaseAuth,
+    TResult Function(LoginRequestModel loginRequest)? firebaseAuth,
     required TResult orElse(),
   }) {
     if (togglePasswordVisibility != null) {
@@ -817,9 +817,9 @@ abstract class _$$FirebaseAuthImplCopyWith<$Res> {
           _$FirebaseAuthImpl value, $Res Function(_$FirebaseAuthImpl) then) =
       __$$FirebaseAuthImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({LoginRequest loginRequest});
+  $Res call({LoginRequestModel loginRequest});
 
-  $LoginRequestCopyWith<$Res> get loginRequest;
+  $LoginRequestModelCopyWith<$Res> get loginRequest;
 }
 
 /// @nodoc
@@ -839,14 +839,14 @@ class __$$FirebaseAuthImplCopyWithImpl<$Res>
       loginRequest: null == loginRequest
           ? _value.loginRequest
           : loginRequest // ignore: cast_nullable_to_non_nullable
-              as LoginRequest,
+              as LoginRequestModel,
     ));
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $LoginRequestCopyWith<$Res> get loginRequest {
-    return $LoginRequestCopyWith<$Res>(_value.loginRequest, (value) {
+  $LoginRequestModelCopyWith<$Res> get loginRequest {
+    return $LoginRequestModelCopyWith<$Res>(_value.loginRequest, (value) {
       return _then(_value.copyWith(loginRequest: value));
     });
   }
@@ -858,7 +858,7 @@ class _$FirebaseAuthImpl implements _FirebaseAuth {
   const _$FirebaseAuthImpl({required this.loginRequest});
 
   @override
-  final LoginRequest loginRequest;
+  final LoginRequestModel loginRequest;
 
   @override
   String toString() {
@@ -891,7 +891,7 @@ class _$FirebaseAuthImpl implements _FirebaseAuth {
     required TResult Function() onInitialAllEvent,
     required TResult Function() signOut,
     required TResult Function() togglePasswordVisibility,
-    required TResult Function(LoginRequest loginRequest) firebaseAuth,
+    required TResult Function(LoginRequestModel loginRequest) firebaseAuth,
   }) {
     return firebaseAuth(loginRequest);
   }
@@ -904,7 +904,7 @@ class _$FirebaseAuthImpl implements _FirebaseAuth {
     TResult? Function()? onInitialAllEvent,
     TResult? Function()? signOut,
     TResult? Function()? togglePasswordVisibility,
-    TResult? Function(LoginRequest loginRequest)? firebaseAuth,
+    TResult? Function(LoginRequestModel loginRequest)? firebaseAuth,
   }) {
     return firebaseAuth?.call(loginRequest);
   }
@@ -917,7 +917,7 @@ class _$FirebaseAuthImpl implements _FirebaseAuth {
     TResult Function()? onInitialAllEvent,
     TResult Function()? signOut,
     TResult Function()? togglePasswordVisibility,
-    TResult Function(LoginRequest loginRequest)? firebaseAuth,
+    TResult Function(LoginRequestModel loginRequest)? firebaseAuth,
     required TResult orElse(),
   }) {
     if (firebaseAuth != null) {
@@ -973,10 +973,10 @@ class _$FirebaseAuthImpl implements _FirebaseAuth {
 }
 
 abstract class _FirebaseAuth implements LogInEvent {
-  const factory _FirebaseAuth({required final LoginRequest loginRequest}) =
+  const factory _FirebaseAuth({required final LoginRequestModel loginRequest}) =
       _$FirebaseAuthImpl;
 
-  LoginRequest get loginRequest;
+  LoginRequestModel get loginRequest;
   @JsonKey(ignore: true)
   _$$FirebaseAuthImplCopyWith<_$FirebaseAuthImpl> get copyWith =>
       throw _privateConstructorUsedError;

@@ -284,7 +284,8 @@ abstract class _OnIntialAllEvent implements ConversationUserEvent {
 /// @nodoc
 mixin _$ConversationUserState {
   Map<String, dynamic>? get userData => throw _privateConstructorUsedError;
-  List<UserResponse>? get allUsersData => throw _privateConstructorUsedError;
+  List<UserResponseModel>? get allUsersData =>
+      throw _privateConstructorUsedError;
   ConversationUserStatus get conversationUserStatus =>
       throw _privateConstructorUsedError;
   String? get errorMessage => throw _privateConstructorUsedError;
@@ -302,7 +303,7 @@ abstract class $ConversationUserStateCopyWith<$Res> {
   @useResult
   $Res call(
       {Map<String, dynamic>? userData,
-      List<UserResponse>? allUsersData,
+      List<UserResponseModel>? allUsersData,
       ConversationUserStatus conversationUserStatus,
       String? errorMessage});
 }
@@ -334,7 +335,7 @@ class _$ConversationUserStateCopyWithImpl<$Res,
       allUsersData: freezed == allUsersData
           ? _value.allUsersData
           : allUsersData // ignore: cast_nullable_to_non_nullable
-              as List<UserResponse>?,
+              as List<UserResponseModel>?,
       conversationUserStatus: null == conversationUserStatus
           ? _value.conversationUserStatus
           : conversationUserStatus // ignore: cast_nullable_to_non_nullable
@@ -357,7 +358,7 @@ abstract class _$$UserResponseStateImplCopyWith<$Res>
   @useResult
   $Res call(
       {Map<String, dynamic>? userData,
-      List<UserResponse>? allUsersData,
+      List<UserResponseModel>? allUsersData,
       ConversationUserStatus conversationUserStatus,
       String? errorMessage});
 }
@@ -386,7 +387,7 @@ class __$$UserResponseStateImplCopyWithImpl<$Res>
       allUsersData: freezed == allUsersData
           ? _value._allUsersData
           : allUsersData // ignore: cast_nullable_to_non_nullable
-              as List<UserResponse>?,
+              as List<UserResponseModel>?,
       conversationUserStatus: null == conversationUserStatus
           ? _value.conversationUserStatus
           : conversationUserStatus // ignore: cast_nullable_to_non_nullable
@@ -404,7 +405,7 @@ class __$$UserResponseStateImplCopyWithImpl<$Res>
 class _$UserResponseStateImpl implements _UserResponseState {
   const _$UserResponseStateImpl(
       {required final Map<String, dynamic>? userData,
-      required final List<UserResponse>? allUsersData,
+      required final List<UserResponseModel>? allUsersData,
       required this.conversationUserStatus,
       this.errorMessage})
       : _userData = userData,
@@ -420,9 +421,9 @@ class _$UserResponseStateImpl implements _UserResponseState {
     return EqualUnmodifiableMapView(value);
   }
 
-  final List<UserResponse>? _allUsersData;
+  final List<UserResponseModel>? _allUsersData;
   @override
-  List<UserResponse>? get allUsersData {
+  List<UserResponseModel>? get allUsersData {
     final value = _allUsersData;
     if (value == null) return null;
     if (_allUsersData is EqualUnmodifiableListView) return _allUsersData;
@@ -473,14 +474,14 @@ class _$UserResponseStateImpl implements _UserResponseState {
 abstract class _UserResponseState implements ConversationUserState {
   const factory _UserResponseState(
       {required final Map<String, dynamic>? userData,
-      required final List<UserResponse>? allUsersData,
+      required final List<UserResponseModel>? allUsersData,
       required final ConversationUserStatus conversationUserStatus,
       final String? errorMessage}) = _$UserResponseStateImpl;
 
   @override
   Map<String, dynamic>? get userData;
   @override
-  List<UserResponse>? get allUsersData;
+  List<UserResponseModel>? get allUsersData;
   @override
   ConversationUserStatus get conversationUserStatus;
   @override

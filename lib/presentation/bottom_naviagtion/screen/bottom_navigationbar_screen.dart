@@ -1,6 +1,6 @@
 
-import 'package:firebase_chat_app/presentation/conversation_user/screens/conversation_user_screen.dart';
-import 'package:firebase_chat_app/presentation/user_response/screen/user_response_screeen.dart';
+import 'package:firebase_chat_app/presentation/conversation/screens/conversation_user_screen.dart';
+import 'package:firebase_chat_app/presentation/user/screen/user_screeen.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_chat_app/utils/color_constant.dart';
 
@@ -17,7 +17,7 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
 
   List<Widget> get views => [
     const ConversationUserScreen(),
-    const UserResponseScreen(),
+    const UserScreen(),
   ];
 
   @override

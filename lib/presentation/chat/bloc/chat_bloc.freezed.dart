@@ -20,21 +20,21 @@ mixin _$ChatEvent {
   TResult when<TResult extends Object?>({
     required TResult Function() loadMessages,
     required TResult Function(String message, String sendBy) message,
-    required TResult Function(List<ChatRequest> messages) updateMessages,
+    required TResult Function(List<ChatRequestModel> messages) updateMessages,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loadMessages,
     TResult? Function(String message, String sendBy)? message,
-    TResult? Function(List<ChatRequest> messages)? updateMessages,
+    TResult? Function(List<ChatRequestModel> messages)? updateMessages,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loadMessages,
     TResult Function(String message, String sendBy)? message,
-    TResult Function(List<ChatRequest> messages)? updateMessages,
+    TResult Function(List<ChatRequestModel> messages)? updateMessages,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -119,7 +119,7 @@ class _$LoadMessagesImpl implements _LoadMessages {
   TResult when<TResult extends Object?>({
     required TResult Function() loadMessages,
     required TResult Function(String message, String sendBy) message,
-    required TResult Function(List<ChatRequest> messages) updateMessages,
+    required TResult Function(List<ChatRequestModel> messages) updateMessages,
   }) {
     return loadMessages();
   }
@@ -129,7 +129,7 @@ class _$LoadMessagesImpl implements _LoadMessages {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loadMessages,
     TResult? Function(String message, String sendBy)? message,
-    TResult? Function(List<ChatRequest> messages)? updateMessages,
+    TResult? Function(List<ChatRequestModel> messages)? updateMessages,
   }) {
     return loadMessages?.call();
   }
@@ -139,7 +139,7 @@ class _$LoadMessagesImpl implements _LoadMessages {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loadMessages,
     TResult Function(String message, String sendBy)? message,
-    TResult Function(List<ChatRequest> messages)? updateMessages,
+    TResult Function(List<ChatRequestModel> messages)? updateMessages,
     required TResult orElse(),
   }) {
     if (loadMessages != null) {
@@ -261,7 +261,7 @@ class _$MessageImpl implements _Message {
   TResult when<TResult extends Object?>({
     required TResult Function() loadMessages,
     required TResult Function(String message, String sendBy) message,
-    required TResult Function(List<ChatRequest> messages) updateMessages,
+    required TResult Function(List<ChatRequestModel> messages) updateMessages,
   }) {
     return message(this.message, sendBy);
   }
@@ -271,7 +271,7 @@ class _$MessageImpl implements _Message {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loadMessages,
     TResult? Function(String message, String sendBy)? message,
-    TResult? Function(List<ChatRequest> messages)? updateMessages,
+    TResult? Function(List<ChatRequestModel> messages)? updateMessages,
   }) {
     return message?.call(this.message, sendBy);
   }
@@ -281,7 +281,7 @@ class _$MessageImpl implements _Message {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loadMessages,
     TResult Function(String message, String sendBy)? message,
-    TResult Function(List<ChatRequest> messages)? updateMessages,
+    TResult Function(List<ChatRequestModel> messages)? updateMessages,
     required TResult orElse(),
   }) {
     if (message != null) {
@@ -343,7 +343,7 @@ abstract class _$$UpdateMessagesImplCopyWith<$Res> {
           $Res Function(_$UpdateMessagesImpl) then) =
       __$$UpdateMessagesImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({List<ChatRequest> messages});
+  $Res call({List<ChatRequestModel> messages});
 }
 
 /// @nodoc
@@ -363,7 +363,7 @@ class __$$UpdateMessagesImplCopyWithImpl<$Res>
       messages: null == messages
           ? _value._messages
           : messages // ignore: cast_nullable_to_non_nullable
-              as List<ChatRequest>,
+              as List<ChatRequestModel>,
     ));
   }
 }
@@ -371,12 +371,12 @@ class __$$UpdateMessagesImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$UpdateMessagesImpl implements _UpdateMessages {
-  const _$UpdateMessagesImpl({required final List<ChatRequest> messages})
+  const _$UpdateMessagesImpl({required final List<ChatRequestModel> messages})
       : _messages = messages;
 
-  final List<ChatRequest> _messages;
+  final List<ChatRequestModel> _messages;
   @override
-  List<ChatRequest> get messages {
+  List<ChatRequestModel> get messages {
     if (_messages is EqualUnmodifiableListView) return _messages;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_messages);
@@ -411,7 +411,7 @@ class _$UpdateMessagesImpl implements _UpdateMessages {
   TResult when<TResult extends Object?>({
     required TResult Function() loadMessages,
     required TResult Function(String message, String sendBy) message,
-    required TResult Function(List<ChatRequest> messages) updateMessages,
+    required TResult Function(List<ChatRequestModel> messages) updateMessages,
   }) {
     return updateMessages(messages);
   }
@@ -421,7 +421,7 @@ class _$UpdateMessagesImpl implements _UpdateMessages {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loadMessages,
     TResult? Function(String message, String sendBy)? message,
-    TResult? Function(List<ChatRequest> messages)? updateMessages,
+    TResult? Function(List<ChatRequestModel> messages)? updateMessages,
   }) {
     return updateMessages?.call(messages);
   }
@@ -431,7 +431,7 @@ class _$UpdateMessagesImpl implements _UpdateMessages {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loadMessages,
     TResult Function(String message, String sendBy)? message,
-    TResult Function(List<ChatRequest> messages)? updateMessages,
+    TResult Function(List<ChatRequestModel> messages)? updateMessages,
     required TResult orElse(),
   }) {
     if (updateMessages != null) {
@@ -476,10 +476,10 @@ class _$UpdateMessagesImpl implements _UpdateMessages {
 }
 
 abstract class _UpdateMessages implements ChatEvent {
-  const factory _UpdateMessages({required final List<ChatRequest> messages}) =
-      _$UpdateMessagesImpl;
+  const factory _UpdateMessages(
+      {required final List<ChatRequestModel> messages}) = _$UpdateMessagesImpl;
 
-  List<ChatRequest> get messages;
+  List<ChatRequestModel> get messages;
   @JsonKey(ignore: true)
   _$$UpdateMessagesImplCopyWith<_$UpdateMessagesImpl> get copyWith =>
       throw _privateConstructorUsedError;
@@ -487,7 +487,7 @@ abstract class _UpdateMessages implements ChatEvent {
 
 /// @nodoc
 mixin _$ChatState {
-  List<ChatRequest> get messages => throw _privateConstructorUsedError;
+  List<ChatRequestModel> get messages => throw _privateConstructorUsedError;
   ChatStatus get chatStatus => throw _privateConstructorUsedError;
   String get errorMessage => throw _privateConstructorUsedError;
 
@@ -502,7 +502,9 @@ abstract class $ChatStateCopyWith<$Res> {
       _$ChatStateCopyWithImpl<$Res, ChatState>;
   @useResult
   $Res call(
-      {List<ChatRequest> messages, ChatStatus chatStatus, String errorMessage});
+      {List<ChatRequestModel> messages,
+      ChatStatus chatStatus,
+      String errorMessage});
 }
 
 /// @nodoc
@@ -526,7 +528,7 @@ class _$ChatStateCopyWithImpl<$Res, $Val extends ChatState>
       messages: null == messages
           ? _value.messages
           : messages // ignore: cast_nullable_to_non_nullable
-              as List<ChatRequest>,
+              as List<ChatRequestModel>,
       chatStatus: null == chatStatus
           ? _value.chatStatus
           : chatStatus // ignore: cast_nullable_to_non_nullable
@@ -548,7 +550,9 @@ abstract class _$$ChatStateImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {List<ChatRequest> messages, ChatStatus chatStatus, String errorMessage});
+      {List<ChatRequestModel> messages,
+      ChatStatus chatStatus,
+      String errorMessage});
 }
 
 /// @nodoc
@@ -570,7 +574,7 @@ class __$$ChatStateImplCopyWithImpl<$Res>
       messages: null == messages
           ? _value._messages
           : messages // ignore: cast_nullable_to_non_nullable
-              as List<ChatRequest>,
+              as List<ChatRequestModel>,
       chatStatus: null == chatStatus
           ? _value.chatStatus
           : chatStatus // ignore: cast_nullable_to_non_nullable
@@ -587,14 +591,14 @@ class __$$ChatStateImplCopyWithImpl<$Res>
 
 class _$ChatStateImpl implements _ChatState {
   const _$ChatStateImpl(
-      {required final List<ChatRequest> messages,
+      {required final List<ChatRequestModel> messages,
       required this.chatStatus,
       required this.errorMessage})
       : _messages = messages;
 
-  final List<ChatRequest> _messages;
+  final List<ChatRequestModel> _messages;
   @override
-  List<ChatRequest> get messages {
+  List<ChatRequestModel> get messages {
     if (_messages is EqualUnmodifiableListView) return _messages;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_messages);
@@ -635,12 +639,12 @@ class _$ChatStateImpl implements _ChatState {
 
 abstract class _ChatState implements ChatState {
   const factory _ChatState(
-      {required final List<ChatRequest> messages,
+      {required final List<ChatRequestModel> messages,
       required final ChatStatus chatStatus,
       required final String errorMessage}) = _$ChatStateImpl;
 
   @override
-  List<ChatRequest> get messages;
+  List<ChatRequestModel> get messages;
   @override
   ChatStatus get chatStatus;
   @override

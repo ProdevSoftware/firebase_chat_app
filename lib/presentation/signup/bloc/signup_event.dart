@@ -19,6 +19,6 @@ class SignupEvent with _$SignupEvent {
   const factory SignupEvent.imagePicker() = _ImagePicker;
 
   const factory SignupEvent.firebaseAuth({
-    required SignupRequest signupRequest,
+    required SignupRequestModel signupRequest,
   }) = _FirebaseAuth;
 }

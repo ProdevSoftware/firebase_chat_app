@@ -1,13 +1,14 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'conversation_user_model.dart';
+part of 'user_response_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$UserResponseImpl _$$UserResponseImplFromJson(Map<String, dynamic> json) =>
-    _$UserResponseImpl(
+_$UserResponseModelImpl _$$UserResponseModelImplFromJson(
+        Map<String, dynamic> json) =>
+    _$UserResponseModelImpl(
       email: json['email'] as String?,
       id: json['id'] as String?,
       firstName: json['firstName'] as String?,
@@ -15,7 +16,8 @@ _$UserResponseImpl _$$UserResponseImplFromJson(Map<String, dynamic> json) =>
       profileImage: json['profileImage'] as String?,
     );
 
-Map<String, dynamic> _$$UserResponseImplToJson(_$UserResponseImpl instance) =>
+Map<String, dynamic> _$$UserResponseModelImplToJson(
+        _$UserResponseModelImpl instance) =>
     <String, dynamic>{
       'email': instance.email,
       'id': instance.id,

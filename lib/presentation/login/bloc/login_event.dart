@@ -13,6 +13,6 @@ class LogInEvent with _$LogInEvent {
   const factory LogInEvent.signOut() = _SignOut;
   const factory LogInEvent.togglePasswordVisibility() = _TogglePasswordVisibility;
 
-  const factory LogInEvent.firebaseAuth({required LoginRequest loginRequest}) =
+  const factory LogInEvent.firebaseAuth({required LoginRequestModel loginRequest}) =
       _FirebaseAuth;
 }

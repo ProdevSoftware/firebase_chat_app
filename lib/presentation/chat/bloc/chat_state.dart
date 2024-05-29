@@ -3,7 +3,7 @@ part of 'chat_bloc.dart';
 @freezed
 class ChatState with _$ChatState {
   const factory ChatState({
-    required List<ChatRequest> messages,
+    required List<ChatRequestModel> messages,
     required ChatStatus chatStatus,
     required String errorMessage,
   }) = _ChatState;

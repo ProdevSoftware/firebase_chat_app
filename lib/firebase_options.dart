@@ -50,19 +50,19 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'xxxxxx',
-    appId: 'xxxxxxx',
+    apiKey: 'xxxxxxx',
+    appId: 'xxxxxx',
     messagingSenderId: 'xxxxxx',
     projectId: 'xxxxxxx',
-    storageBucket: 'xxxxxxxx',
+    storageBucket: 'xxxxxx',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'xxxxxx',
-    appId: 'xxxxxxx',
-    messagingSenderId: 'xxxxxx',
-    projectId: 'xxxxxxx',
-    storageBucket: 'xxxxxxxx',
-    iosBundleId: 'xxxxxxxxxx',
+    apiKey: 'xxxxx',
+    appId: 'xxxxxx',
+    messagingSenderId: 'xxxxx',
+    projectId: 'xxxxxx',
+    storageBucket: 'xxxxx',
+    iosBundleId: 'xxxxxx',
   );
 }

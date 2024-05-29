@@ -1,4 +1,10 @@
 part of 'signup_bloc.dart';
+enum SignupStatus {
+  loading,
+  success,
+  none,
+  error,
+}
 
 @freezed
 class SignupState with _$SignupState {

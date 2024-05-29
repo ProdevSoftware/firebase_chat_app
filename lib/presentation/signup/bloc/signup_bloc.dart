@@ -1,8 +1,7 @@
 import 'dart:async';
 import 'dart:io';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_chat_app/presentation/signup/bloc/signup_status_state.dart';
-import 'package:firebase_chat_app/presentation/signup/model/signup_request.dart';
+import 'package:firebase_chat_app/presentation/signup/model/signup_request_model.dart';
 import 'package:firebase_chat_app/utils/string_constant.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

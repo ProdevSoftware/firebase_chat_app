@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'user_response_bloc.dart';
+part of 'user_bloc.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,7 +15,7 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
-mixin _$UserResponseEvent {
+mixin _$UserEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() fetchUsers,
@@ -57,16 +57,15 @@ mixin _$UserResponseEvent {
 }
 
 /// @nodoc
-abstract class $UserResponseEventCopyWith<$Res> {
-  factory $UserResponseEventCopyWith(
-          UserResponseEvent value, $Res Function(UserResponseEvent) then) =
-      _$UserResponseEventCopyWithImpl<$Res, UserResponseEvent>;
+abstract class $UserEventCopyWith<$Res> {
+  factory $UserEventCopyWith(UserEvent value, $Res Function(UserEvent) then) =
+      _$UserEventCopyWithImpl<$Res, UserEvent>;
 }
 
 /// @nodoc
-class _$UserResponseEventCopyWithImpl<$Res, $Val extends UserResponseEvent>
-    implements $UserResponseEventCopyWith<$Res> {
-  _$UserResponseEventCopyWithImpl(this._value, this._then);
+class _$UserEventCopyWithImpl<$Res, $Val extends UserEvent>
+    implements $UserEventCopyWith<$Res> {
+  _$UserEventCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -83,7 +82,7 @@ abstract class _$$FetchUsersImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$FetchUsersImplCopyWithImpl<$Res>
-    extends _$UserResponseEventCopyWithImpl<$Res, _$FetchUsersImpl>
+    extends _$UserEventCopyWithImpl<$Res, _$FetchUsersImpl>
     implements _$$FetchUsersImplCopyWith<$Res> {
   __$$FetchUsersImplCopyWithImpl(
       _$FetchUsersImpl _value, $Res Function(_$FetchUsersImpl) _then)
@@ -97,7 +96,7 @@ class _$FetchUsersImpl implements _FetchUsers {
 
   @override
   String toString() {
-    return 'UserResponseEvent.fetchUsers()';
+    return 'UserEvent.fetchUsers()';
   }
 
   @override
@@ -172,7 +171,7 @@ class _$FetchUsersImpl implements _FetchUsers {
   }
 }
 
-abstract class _FetchUsers implements UserResponseEvent {
+abstract class _FetchUsers implements UserEvent {
   const factory _FetchUsers() = _$FetchUsersImpl;
 }
 
@@ -185,7 +184,7 @@ abstract class _$$OnIntialAllEventImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$OnIntialAllEventImplCopyWithImpl<$Res>
-    extends _$UserResponseEventCopyWithImpl<$Res, _$OnIntialAllEventImpl>
+    extends _$UserEventCopyWithImpl<$Res, _$OnIntialAllEventImpl>
     implements _$$OnIntialAllEventImplCopyWith<$Res> {
   __$$OnIntialAllEventImplCopyWithImpl(_$OnIntialAllEventImpl _value,
       $Res Function(_$OnIntialAllEventImpl) _then)
@@ -199,7 +198,7 @@ class _$OnIntialAllEventImpl implements _OnIntialAllEvent {
 
   @override
   String toString() {
-    return 'UserResponseEvent.onInitialAllEvent()';
+    return 'UserEvent.onInitialAllEvent()';
   }
 
   @override
@@ -274,40 +273,39 @@ class _$OnIntialAllEventImpl implements _OnIntialAllEvent {
   }
 }
 
-abstract class _OnIntialAllEvent implements UserResponseEvent {
+abstract class _OnIntialAllEvent implements UserEvent {
   const factory _OnIntialAllEvent() = _$OnIntialAllEventImpl;
 }
 
 /// @nodoc
-mixin _$UserResponseState {
+mixin _$UserState {
   Map<String, dynamic>? get userData => throw _privateConstructorUsedError;
-  List<UserResponse>? get allUsersData => throw _privateConstructorUsedError;
-  UserResponseStatus get userResponseStatus =>
+  List<UserResponseModel>? get allUsersData =>
       throw _privateConstructorUsedError;
+  UserStatus get userStatus => throw _privateConstructorUsedError;
   String? get errorMessage => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $UserResponseStateCopyWith<UserResponseState> get copyWith =>
+  $UserStateCopyWith<UserState> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $UserResponseStateCopyWith<$Res> {
-  factory $UserResponseStateCopyWith(
-          UserResponseState value, $Res Function(UserResponseState) then) =
-      _$UserResponseStateCopyWithImpl<$Res, UserResponseState>;
+abstract class $UserStateCopyWith<$Res> {
+  factory $UserStateCopyWith(UserState value, $Res Function(UserState) then) =
+      _$UserStateCopyWithImpl<$Res, UserState>;
   @useResult
   $Res call(
       {Map<String, dynamic>? userData,
-      List<UserResponse>? allUsersData,
-      UserResponseStatus userResponseStatus,
+      List<UserResponseModel>? allUsersData,
+      UserStatus userStatus,
       String? errorMessage});
 }
 
 /// @nodoc
-class _$UserResponseStateCopyWithImpl<$Res, $Val extends UserResponseState>
-    implements $UserResponseStateCopyWith<$Res> {
-  _$UserResponseStateCopyWithImpl(this._value, this._then);
+class _$UserStateCopyWithImpl<$Res, $Val extends UserState>
+    implements $UserStateCopyWith<$Res> {
+  _$UserStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -319,7 +317,7 @@ class _$UserResponseStateCopyWithImpl<$Res, $Val extends UserResponseState>
   $Res call({
     Object? userData = freezed,
     Object? allUsersData = freezed,
-    Object? userResponseStatus = null,
+    Object? userStatus = null,
     Object? errorMessage = freezed,
   }) {
     return _then(_value.copyWith(
@@ -330,11 +328,11 @@ class _$UserResponseStateCopyWithImpl<$Res, $Val extends UserResponseState>
       allUsersData: freezed == allUsersData
           ? _value.allUsersData
           : allUsersData // ignore: cast_nullable_to_non_nullable
-              as List<UserResponse>?,
-      userResponseStatus: null == userResponseStatus
-          ? _value.userResponseStatus
-          : userResponseStatus // ignore: cast_nullable_to_non_nullable
-              as UserResponseStatus,
+              as List<UserResponseModel>?,
+      userStatus: null == userStatus
+          ? _value.userStatus
+          : userStatus // ignore: cast_nullable_to_non_nullable
+              as UserStatus,
       errorMessage: freezed == errorMessage
           ? _value.errorMessage
           : errorMessage // ignore: cast_nullable_to_non_nullable
@@ -344,26 +342,26 @@ class _$UserResponseStateCopyWithImpl<$Res, $Val extends UserResponseState>
 }
 
 /// @nodoc
-abstract class _$$UserResponseStateImplCopyWith<$Res>
-    implements $UserResponseStateCopyWith<$Res> {
-  factory _$$UserResponseStateImplCopyWith(_$UserResponseStateImpl value,
-          $Res Function(_$UserResponseStateImpl) then) =
-      __$$UserResponseStateImplCopyWithImpl<$Res>;
+abstract class _$$UserStateImplCopyWith<$Res>
+    implements $UserStateCopyWith<$Res> {
+  factory _$$UserStateImplCopyWith(
+          _$UserStateImpl value, $Res Function(_$UserStateImpl) then) =
+      __$$UserStateImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {Map<String, dynamic>? userData,
-      List<UserResponse>? allUsersData,
-      UserResponseStatus userResponseStatus,
+      List<UserResponseModel>? allUsersData,
+      UserStatus userStatus,
       String? errorMessage});
 }
 
 /// @nodoc
-class __$$UserResponseStateImplCopyWithImpl<$Res>
-    extends _$UserResponseStateCopyWithImpl<$Res, _$UserResponseStateImpl>
-    implements _$$UserResponseStateImplCopyWith<$Res> {
-  __$$UserResponseStateImplCopyWithImpl(_$UserResponseStateImpl _value,
-      $Res Function(_$UserResponseStateImpl) _then)
+class __$$UserStateImplCopyWithImpl<$Res>
+    extends _$UserStateCopyWithImpl<$Res, _$UserStateImpl>
+    implements _$$UserStateImplCopyWith<$Res> {
+  __$$UserStateImplCopyWithImpl(
+      _$UserStateImpl _value, $Res Function(_$UserStateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -371,10 +369,10 @@ class __$$UserResponseStateImplCopyWithImpl<$Res>
   $Res call({
     Object? userData = freezed,
     Object? allUsersData = freezed,
-    Object? userResponseStatus = null,
+    Object? userStatus = null,
     Object? errorMessage = freezed,
   }) {
-    return _then(_$UserResponseStateImpl(
+    return _then(_$UserStateImpl(
       userData: freezed == userData
           ? _value._userData
           : userData // ignore: cast_nullable_to_non_nullable
@@ -382,11 +380,11 @@ class __$$UserResponseStateImplCopyWithImpl<$Res>
       allUsersData: freezed == allUsersData
           ? _value._allUsersData
           : allUsersData // ignore: cast_nullable_to_non_nullable
-              as List<UserResponse>?,
-      userResponseStatus: null == userResponseStatus
-          ? _value.userResponseStatus
-          : userResponseStatus // ignore: cast_nullable_to_non_nullable
-              as UserResponseStatus,
+              as List<UserResponseModel>?,
+      userStatus: null == userStatus
+          ? _value.userStatus
+          : userStatus // ignore: cast_nullable_to_non_nullable
+              as UserStatus,
       errorMessage: freezed == errorMessage
           ? _value.errorMessage
           : errorMessage // ignore: cast_nullable_to_non_nullable
@@ -397,11 +395,11 @@ class __$$UserResponseStateImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$UserResponseStateImpl implements _UserResponseState {
-  const _$UserResponseStateImpl(
+class _$UserStateImpl implements _UserState {
+  const _$UserStateImpl(
       {required final Map<String, dynamic>? userData,
-      required final List<UserResponse>? allUsersData,
-      required this.userResponseStatus,
+      required final List<UserResponseModel>? allUsersData,
+      required this.userStatus,
       this.errorMessage})
       : _userData = userData,
         _allUsersData = allUsersData;
@@ -416,9 +414,9 @@ class _$UserResponseStateImpl implements _UserResponseState {
     return EqualUnmodifiableMapView(value);
   }
 
-  final List<UserResponse>? _allUsersData;
+  final List<UserResponseModel>? _allUsersData;
   @override
-  List<UserResponse>? get allUsersData {
+  List<UserResponseModel>? get allUsersData {
     final value = _allUsersData;
     if (value == null) return null;
     if (_allUsersData is EqualUnmodifiableListView) return _allUsersData;
@@ -427,25 +425,25 @@ class _$UserResponseStateImpl implements _UserResponseState {
   }
 
   @override
-  final UserResponseStatus userResponseStatus;
+  final UserStatus userStatus;
   @override
   final String? errorMessage;
 
   @override
   String toString() {
-    return 'UserResponseState(userData: $userData, allUsersData: $allUsersData, userResponseStatus: $userResponseStatus, errorMessage: $errorMessage)';
+    return 'UserState(userData: $userData, allUsersData: $allUsersData, userStatus: $userStatus, errorMessage: $errorMessage)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$UserResponseStateImpl &&
+            other is _$UserStateImpl &&
             const DeepCollectionEquality().equals(other._userData, _userData) &&
             const DeepCollectionEquality()
                 .equals(other._allUsersData, _allUsersData) &&
-            (identical(other.userResponseStatus, userResponseStatus) ||
-                other.userResponseStatus == userResponseStatus) &&
+            (identical(other.userStatus, userStatus) ||
+                other.userStatus == userStatus) &&
             (identical(other.errorMessage, errorMessage) ||
                 other.errorMessage == errorMessage));
   }
@@ -455,34 +453,33 @@ class _$UserResponseStateImpl implements _UserResponseState {
       runtimeType,
       const DeepCollectionEquality().hash(_userData),
       const DeepCollectionEquality().hash(_allUsersData),
-      userResponseStatus,
+      userStatus,
       errorMessage);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$UserResponseStateImplCopyWith<_$UserResponseStateImpl> get copyWith =>
-      __$$UserResponseStateImplCopyWithImpl<_$UserResponseStateImpl>(
-          this, _$identity);
+  _$$UserStateImplCopyWith<_$UserStateImpl> get copyWith =>
+      __$$UserStateImplCopyWithImpl<_$UserStateImpl>(this, _$identity);
 }
 
-abstract class _UserResponseState implements UserResponseState {
-  const factory _UserResponseState(
+abstract class _UserState implements UserState {
+  const factory _UserState(
       {required final Map<String, dynamic>? userData,
-      required final List<UserResponse>? allUsersData,
-      required final UserResponseStatus userResponseStatus,
-      final String? errorMessage}) = _$UserResponseStateImpl;
+      required final List<UserResponseModel>? allUsersData,
+      required final UserStatus userStatus,
+      final String? errorMessage}) = _$UserStateImpl;
 
   @override
   Map<String, dynamic>? get userData;
   @override
-  List<UserResponse>? get allUsersData;
+  List<UserResponseModel>? get allUsersData;
   @override
-  UserResponseStatus get userResponseStatus;
+  UserStatus get userStatus;
   @override
   String? get errorMessage;
   @override
   @JsonKey(ignore: true)
-  _$$UserResponseStateImplCopyWith<_$UserResponseStateImpl> get copyWith =>
+  _$$UserStateImplCopyWith<_$UserStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

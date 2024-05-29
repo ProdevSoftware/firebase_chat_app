@@ -1,5 +1,10 @@
 part of 'login_bloc.dart';
-
+enum LoginStatus {
+  loading,
+  success,
+  none,
+  error,
+}
 @freezed
 class LoginState with _$LoginState {
   const factory LoginState({

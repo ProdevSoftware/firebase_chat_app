@@ -14,12 +14,12 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
-ChatRequest _$ChatRequestFromJson(Map<String, dynamic> json) {
-  return _ChatRequest.fromJson(json);
+ChatRequestModel _$ChatRequestModelFromJson(Map<String, dynamic> json) {
+  return _ChatRequestModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$ChatRequest {
+mixin _$ChatRequestModel {
   @JsonKey(name: 'message')
   String get message => throw _privateConstructorUsedError;
   @JsonKey(name: 'sendBy')
@@ -29,15 +29,15 @@ mixin _$ChatRequest {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ChatRequestCopyWith<ChatRequest> get copyWith =>
+  $ChatRequestModelCopyWith<ChatRequestModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ChatRequestCopyWith<$Res> {
-  factory $ChatRequestCopyWith(
-          ChatRequest value, $Res Function(ChatRequest) then) =
-      _$ChatRequestCopyWithImpl<$Res, ChatRequest>;
+abstract class $ChatRequestModelCopyWith<$Res> {
+  factory $ChatRequestModelCopyWith(
+          ChatRequestModel value, $Res Function(ChatRequestModel) then) =
+      _$ChatRequestModelCopyWithImpl<$Res, ChatRequestModel>;
   @useResult
   $Res call(
       {@JsonKey(name: 'message') String message,
@@ -46,9 +46,9 @@ abstract class $ChatRequestCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ChatRequestCopyWithImpl<$Res, $Val extends ChatRequest>
-    implements $ChatRequestCopyWith<$Res> {
-  _$ChatRequestCopyWithImpl(this._value, this._then);
+class _$ChatRequestModelCopyWithImpl<$Res, $Val extends ChatRequestModel>
+    implements $ChatRequestModelCopyWith<$Res> {
+  _$ChatRequestModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -80,11 +80,11 @@ class _$ChatRequestCopyWithImpl<$Res, $Val extends ChatRequest>
 }
 
 /// @nodoc
-abstract class _$$ChatRequestImplCopyWith<$Res>
-    implements $ChatRequestCopyWith<$Res> {
-  factory _$$ChatRequestImplCopyWith(
-          _$ChatRequestImpl value, $Res Function(_$ChatRequestImpl) then) =
-      __$$ChatRequestImplCopyWithImpl<$Res>;
+abstract class _$$ChatRequestModelImplCopyWith<$Res>
+    implements $ChatRequestModelCopyWith<$Res> {
+  factory _$$ChatRequestModelImplCopyWith(_$ChatRequestModelImpl value,
+          $Res Function(_$ChatRequestModelImpl) then) =
+      __$$ChatRequestModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -94,11 +94,11 @@ abstract class _$$ChatRequestImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$ChatRequestImplCopyWithImpl<$Res>
-    extends _$ChatRequestCopyWithImpl<$Res, _$ChatRequestImpl>
-    implements _$$ChatRequestImplCopyWith<$Res> {
-  __$$ChatRequestImplCopyWithImpl(
-      _$ChatRequestImpl _value, $Res Function(_$ChatRequestImpl) _then)
+class __$$ChatRequestModelImplCopyWithImpl<$Res>
+    extends _$ChatRequestModelCopyWithImpl<$Res, _$ChatRequestModelImpl>
+    implements _$$ChatRequestModelImplCopyWith<$Res> {
+  __$$ChatRequestModelImplCopyWithImpl(_$ChatRequestModelImpl _value,
+      $Res Function(_$ChatRequestModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -108,7 +108,7 @@ class __$$ChatRequestImplCopyWithImpl<$Res>
     Object? sendBy = null,
     Object? createdOn = null,
   }) {
-    return _then(_$ChatRequestImpl(
+    return _then(_$ChatRequestModelImpl(
       message: null == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
@@ -127,14 +127,14 @@ class __$$ChatRequestImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$ChatRequestImpl implements _ChatRequest {
-  const _$ChatRequestImpl(
+class _$ChatRequestModelImpl implements _ChatRequestModel {
+  const _$ChatRequestModelImpl(
       {@JsonKey(name: 'message') required this.message,
       @JsonKey(name: 'sendBy') required this.sendBy,
       @JsonKey(name: 'createdOn') required this.createdOn});
 
-  factory _$ChatRequestImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ChatRequestImplFromJson(json);
+  factory _$ChatRequestModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ChatRequestModelImplFromJson(json);
 
   @override
   @JsonKey(name: 'message')
@@ -148,14 +148,14 @@ class _$ChatRequestImpl implements _ChatRequest {
 
   @override
   String toString() {
-    return 'ChatRequest(message: $message, sendBy: $sendBy, createdOn: $createdOn)';
+    return 'ChatRequestModel(message: $message, sendBy: $sendBy, createdOn: $createdOn)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ChatRequestImpl &&
+            other is _$ChatRequestModelImpl &&
             (identical(other.message, message) || other.message == message) &&
             (identical(other.sendBy, sendBy) || other.sendBy == sendBy) &&
             (identical(other.createdOn, createdOn) ||
@@ -169,26 +169,27 @@ class _$ChatRequestImpl implements _ChatRequest {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$ChatRequestImplCopyWith<_$ChatRequestImpl> get copyWith =>
-      __$$ChatRequestImplCopyWithImpl<_$ChatRequestImpl>(this, _$identity);
+  _$$ChatRequestModelImplCopyWith<_$ChatRequestModelImpl> get copyWith =>
+      __$$ChatRequestModelImplCopyWithImpl<_$ChatRequestModelImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ChatRequestImplToJson(
+    return _$$ChatRequestModelImplToJson(
       this,
     );
   }
 }
 
-abstract class _ChatRequest implements ChatRequest {
-  const factory _ChatRequest(
+abstract class _ChatRequestModel implements ChatRequestModel {
+  const factory _ChatRequestModel(
           {@JsonKey(name: 'message') required final String message,
           @JsonKey(name: 'sendBy') required final String sendBy,
           @JsonKey(name: 'createdOn') required final String createdOn}) =
-      _$ChatRequestImpl;
+      _$ChatRequestModelImpl;
 
-  factory _ChatRequest.fromJson(Map<String, dynamic> json) =
-      _$ChatRequestImpl.fromJson;
+  factory _ChatRequestModel.fromJson(Map<String, dynamic> json) =
+      _$ChatRequestModelImpl.fromJson;
 
   @override
   @JsonKey(name: 'message')
@@ -201,6 +202,6 @@ abstract class _ChatRequest implements ChatRequest {
   String get createdOn;
   @override
   @JsonKey(ignore: true)
-  _$$ChatRequestImplCopyWith<_$ChatRequestImpl> get copyWith =>
+  _$$ChatRequestModelImplCopyWith<_$ChatRequestModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -1,10 +1,7 @@
-import 'dart:io';
 import 'package:firebase_chat_app/global_widget/custom_button.dart';
 import 'package:firebase_chat_app/global_widget/custom_textfield.dart';
-import 'package:firebase_chat_app/presentation/login/screens/login_screen.dart';
 import 'package:firebase_chat_app/presentation/signup/bloc/signup_bloc.dart';
-import 'package:firebase_chat_app/presentation/signup/bloc/signup_status_state.dart';
-import 'package:firebase_chat_app/presentation/signup/model/signup_request.dart';
+import 'package:firebase_chat_app/presentation/signup/model/signup_request_model.dart';
 import 'package:firebase_chat_app/utils/app_style_constant.dart';
 import 'package:firebase_chat_app/utils/color_constant.dart';
 import 'package:firebase_chat_app/utils/string_constant.dart';
@@ -83,15 +80,15 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                 shape: BoxShape.circle,
                                 image: state.profileImage != null
                                     ? DecorationImage(
-                                  image: FileImage(state.profileImage!),
-                                  fit: BoxFit.cover,
-                                )
+                                        image: FileImage(state.profileImage!),
+                                        fit: BoxFit.cover,
+                                      )
                                     : null,
                                 color: ColorConstant.colorE1BEE7,
                               ),
                               child: state.profileImage == null
                                   ? const Icon(Icons.person,
-                                  size: 50, color: Colors.white)
+                                      size: 50, color: Colors.white)
                                   : null,
                             ),
                             Positioned(
@@ -174,8 +171,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                   const SignupEvent.togglePasswordVisibility());
                             },
                             child: Icon(
-                              state.isPasswordVisible ? Icons.visibility : Icons
-                                  .visibility_off,
+                              state.isPasswordVisible
+                                  ? Icons.visibility
+                                  : Icons.visibility_off,
                             ),
                           ),
                           onChanged: (password) {
@@ -214,21 +212,21 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                 passwordController.text.isEmpty) {
                               fieldsEmpty = true;
                             }
-          
+
                             if (fieldsEmpty) {
                               ScaffoldMessenger.of(context).showSnackBar(
                                 const SnackBar(
-                                  content: Text(
-                                      StringConstant.fillRequiredFilled),
+                                  content:
+                                      Text(StringConstant.fillRequiredFilled),
                                   backgroundColor: Colors.red,
                                 ),
                               );
                               return;
                             }
-          
+
                             bloc.add(
                               SignupEvent.firebaseAuth(
-                                signupRequest: SignupRequest(
+                                signupRequest: SignupRequestModel(
                                   image: '',
                                   lastname: lastnameController.text,
                                   firstname: firstnameController.text,

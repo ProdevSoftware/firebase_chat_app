@@ -2,8 +2,7 @@ import 'dart:async';
 
 import 'package:email_validator/email_validator.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_chat_app/presentation/login/bloc/login_status_state.dart';
-import 'package:firebase_chat_app/presentation/login/model/login_request.dart';
+import 'package:firebase_chat_app/presentation/login/model/login_request_model.dart';
 import 'package:firebase_chat_app/utils/string_constant.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';

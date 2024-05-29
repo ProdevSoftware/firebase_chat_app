@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'signup_request.dart';
+part of 'signup_request_model.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,12 +14,12 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
-SignupRequest _$SignupRequestFromJson(Map<String, dynamic> json) {
-  return _SignupRequest.fromJson(json);
+SignupRequestModel _$SignupRequestModelFromJson(Map<String, dynamic> json) {
+  return _SignupRequestModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$SignupRequest {
+mixin _$SignupRequestModel {
   @JsonKey(name: 'firstname')
   String get firstname => throw _privateConstructorUsedError;
   @JsonKey(name: 'lastname')
@@ -33,15 +33,15 @@ mixin _$SignupRequest {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $SignupRequestCopyWith<SignupRequest> get copyWith =>
+  $SignupRequestModelCopyWith<SignupRequestModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $SignupRequestCopyWith<$Res> {
-  factory $SignupRequestCopyWith(
-          SignupRequest value, $Res Function(SignupRequest) then) =
-      _$SignupRequestCopyWithImpl<$Res, SignupRequest>;
+abstract class $SignupRequestModelCopyWith<$Res> {
+  factory $SignupRequestModelCopyWith(
+          SignupRequestModel value, $Res Function(SignupRequestModel) then) =
+      _$SignupRequestModelCopyWithImpl<$Res, SignupRequestModel>;
   @useResult
   $Res call(
       {@JsonKey(name: 'firstname') String firstname,
@@ -52,9 +52,9 @@ abstract class $SignupRequestCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SignupRequestCopyWithImpl<$Res, $Val extends SignupRequest>
-    implements $SignupRequestCopyWith<$Res> {
-  _$SignupRequestCopyWithImpl(this._value, this._then);
+class _$SignupRequestModelCopyWithImpl<$Res, $Val extends SignupRequestModel>
+    implements $SignupRequestModelCopyWith<$Res> {
+  _$SignupRequestModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -96,11 +96,11 @@ class _$SignupRequestCopyWithImpl<$Res, $Val extends SignupRequest>
 }
 
 /// @nodoc
-abstract class _$$SignupRequestImplCopyWith<$Res>
-    implements $SignupRequestCopyWith<$Res> {
-  factory _$$SignupRequestImplCopyWith(
-          _$SignupRequestImpl value, $Res Function(_$SignupRequestImpl) then) =
-      __$$SignupRequestImplCopyWithImpl<$Res>;
+abstract class _$$SignupRequestModelImplCopyWith<$Res>
+    implements $SignupRequestModelCopyWith<$Res> {
+  factory _$$SignupRequestModelImplCopyWith(_$SignupRequestModelImpl value,
+          $Res Function(_$SignupRequestModelImpl) then) =
+      __$$SignupRequestModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -112,11 +112,11 @@ abstract class _$$SignupRequestImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$SignupRequestImplCopyWithImpl<$Res>
-    extends _$SignupRequestCopyWithImpl<$Res, _$SignupRequestImpl>
-    implements _$$SignupRequestImplCopyWith<$Res> {
-  __$$SignupRequestImplCopyWithImpl(
-      _$SignupRequestImpl _value, $Res Function(_$SignupRequestImpl) _then)
+class __$$SignupRequestModelImplCopyWithImpl<$Res>
+    extends _$SignupRequestModelCopyWithImpl<$Res, _$SignupRequestModelImpl>
+    implements _$$SignupRequestModelImplCopyWith<$Res> {
+  __$$SignupRequestModelImplCopyWithImpl(_$SignupRequestModelImpl _value,
+      $Res Function(_$SignupRequestModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -128,7 +128,7 @@ class __$$SignupRequestImplCopyWithImpl<$Res>
     Object? password = null,
     Object? image = null,
   }) {
-    return _then(_$SignupRequestImpl(
+    return _then(_$SignupRequestModelImpl(
       firstname: null == firstname
           ? _value.firstname
           : firstname // ignore: cast_nullable_to_non_nullable
@@ -155,16 +155,16 @@ class __$$SignupRequestImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$SignupRequestImpl implements _SignupRequest {
-  const _$SignupRequestImpl(
+class _$SignupRequestModelImpl implements _SignupRequestModel {
+  const _$SignupRequestModelImpl(
       {@JsonKey(name: 'firstname') required this.firstname,
       @JsonKey(name: 'lastname') required this.lastname,
       @JsonKey(name: 'email') required this.email,
       @JsonKey(name: 'password') required this.password,
       @JsonKey(name: 'image') required this.image});
 
-  factory _$SignupRequestImpl.fromJson(Map<String, dynamic> json) =>
-      _$$SignupRequestImplFromJson(json);
+  factory _$SignupRequestModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SignupRequestModelImplFromJson(json);
 
   @override
   @JsonKey(name: 'firstname')
@@ -184,14 +184,14 @@ class _$SignupRequestImpl implements _SignupRequest {
 
   @override
   String toString() {
-    return 'SignupRequest(firstname: $firstname, lastname: $lastname, email: $email, password: $password, image: $image)';
+    return 'SignupRequestModel(firstname: $firstname, lastname: $lastname, email: $email, password: $password, image: $image)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$SignupRequestImpl &&
+            other is _$SignupRequestModelImpl &&
             (identical(other.firstname, firstname) ||
                 other.firstname == firstname) &&
             (identical(other.lastname, lastname) ||
@@ -210,28 +210,29 @@ class _$SignupRequestImpl implements _SignupRequest {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$SignupRequestImplCopyWith<_$SignupRequestImpl> get copyWith =>
-      __$$SignupRequestImplCopyWithImpl<_$SignupRequestImpl>(this, _$identity);
+  _$$SignupRequestModelImplCopyWith<_$SignupRequestModelImpl> get copyWith =>
+      __$$SignupRequestModelImplCopyWithImpl<_$SignupRequestModelImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$SignupRequestImplToJson(
+    return _$$SignupRequestModelImplToJson(
       this,
     );
   }
 }
 
-abstract class _SignupRequest implements SignupRequest {
-  const factory _SignupRequest(
+abstract class _SignupRequestModel implements SignupRequestModel {
+  const factory _SignupRequestModel(
           {@JsonKey(name: 'firstname') required final String firstname,
           @JsonKey(name: 'lastname') required final String lastname,
           @JsonKey(name: 'email') required final String email,
           @JsonKey(name: 'password') required final String password,
           @JsonKey(name: 'image') required final String image}) =
-      _$SignupRequestImpl;
+      _$SignupRequestModelImpl;
 
-  factory _SignupRequest.fromJson(Map<String, dynamic> json) =
-      _$SignupRequestImpl.fromJson;
+  factory _SignupRequestModel.fromJson(Map<String, dynamic> json) =
+      _$SignupRequestModelImpl.fromJson;
 
   @override
   @JsonKey(name: 'firstname')
@@ -250,6 +251,6 @@ abstract class _SignupRequest implements SignupRequest {
   String get image;
   @override
   @JsonKey(ignore: true)
-  _$$SignupRequestImplCopyWith<_$SignupRequestImpl> get copyWith =>
+  _$$SignupRequestModelImplCopyWith<_$SignupRequestModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

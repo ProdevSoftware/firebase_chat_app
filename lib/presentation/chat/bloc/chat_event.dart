@@ -6,5 +6,5 @@ part of 'chat_bloc.dart';
 class ChatEvent with _$ChatEvent {
   const factory ChatEvent.loadMessages() = _LoadMessages;
   const factory ChatEvent.message({required String message, required String sendBy}) = _Message;
-  const factory ChatEvent.updateMessages({required List<ChatRequest> messages}) = _UpdateMessages;
+  const factory ChatEvent.updateMessages({required List<ChatRequestModel> messages}) = _UpdateMessages;
 }

@@ -1,10 +1,15 @@
 part of 'conversation_user_bloc.dart';
-
+enum ConversationUserStatus {
+  loading,
+  success,
+  none,
+  error,
+}
 @freezed
 class ConversationUserState with _$ConversationUserState {
   const factory ConversationUserState({
     required Map<String, dynamic>? userData,
-    required List<UserResponse>? allUsersData,
+    required List<UserResponseModel>? allUsersData,
     required ConversationUserStatus conversationUserStatus,
     String? errorMessage,
   }) = _UserResponseState;
