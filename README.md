@@ -109,3 +109,8 @@ FirebaseFirestore.instance
       print(messages);
     });
 ```
+# Video
+
+https://github.com/prodev-mob/firebase_chat_app/assets/97152083/f8867c35-0dd9-4496-8d04-d671e51ecb73
+
+
